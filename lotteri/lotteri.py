@@ -1,6 +1,6 @@
 import random
 class Lotteri:
-    def _init_(self):
+    def __init__(self):
         self.list_vinster = [
          "hundra kubik tvål",
          "Ett vildsvin",
@@ -15,6 +15,7 @@ class Lotteri:
          "Lenin, Marx, Engels, El Che, Castro, Allende, Luxembourg, Trotzky, Stalin, Ho Chi Ming och Mao Ze Tong kommer tillbaka till liv!"
     ]
     def get_vinst(self):
+        #print("getvista")
         slumptal = random.randint(0, 10)
         return self.list_vinster[slumptal]
         
