@@ -1,4 +1,5 @@
 def main():
+    
     glosLista = {}
 
     print("-:glosor:-")
@@ -37,6 +38,11 @@ def main():
         fortsatt2 = input("Vill du köra om? j/n: ")
         if fortsatt2 == "n":
             break
+    add_glosor_to_table()
+
+import os
+import sqlite3
+from sqlite3 import DataError
             
 
 
