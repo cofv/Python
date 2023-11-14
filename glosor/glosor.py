@@ -1,5 +1,6 @@
 def main():
     
+
     glosLista = {}
 
     print("-:glosor:-")
@@ -38,11 +39,28 @@ def main():
         fortsatt2 = input("Vill du köra om? j/n: ")
         if fortsatt2 == "n":
             break
-    add_glosor_to_table()
+    
 
 import os
 import sqlite3
 from sqlite3 import DataError
+
+def main():
+   Add_Glosor_To_Table()
+
+
+def Add_Glosor_To_Table()
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    sqliteConnection = sqlite3.connect("glosor.db")
+    cursor =sqliteConnection.cursor()
+
+    sqlite_insert_query = f"""INSERT INTO glosor (Sv, Eng) VALUES ('{svglosa}', '{englos}')"""
+    cursor.execute(sqlite_insert_query)
+    #stänger cursor
+    cursor.close()
+    #stänger connection
+    sqliteConnection.close
             
 
 
